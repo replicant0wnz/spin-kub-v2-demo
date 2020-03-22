@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: primary
-        image: index.docker.io/lwander/spin-kub-v2-demo
+        image: viant/sample-app 
         ports:
         - containerPort: 8000
         readinessProbe:
@@ -50,6 +50,7 @@ metadata:
   name: spinnaker-demo
   namespace: default
 spec:
+  type: LoadBalancer
   selector:
     source: demo
     app: spinnaker
